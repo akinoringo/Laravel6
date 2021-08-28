@@ -29,7 +29,7 @@ RUN apt-get update && \
 	mkdir /var/log/php && \
 	docker-php-ext-install intl pdo_mysql zip bcmath && \
 	composer config -g process-timeout 3600 && \
-	composer config -g repos.packagist composer https://packagist.jp
+	composer config -g repos.packagist composer https://packagist.org
 
 COPY ./php-fpm.d/zzz-www.conf /usr/local/etc/php-fpm.d/zzz-www.conf
 COPY ./php.ini /usr/local/etc/php/php.ini
